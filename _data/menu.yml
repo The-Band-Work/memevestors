@@ -1,0 +1,23 @@
+
+# - {name: 'Cantocore Open Until April 12.', folder: 'rsvp/cantocore', file: 'index.html' }
+# - {name: 'About', folder: 'about', file: 'index.html'}
+# - {name: 'Aaron Owens Interview', folder: 'interview', file: 'index.html'}
+#- {name: 'Artists', folder: 'artists', file: 'index.html'}
+  #- {name: 'Artworks', folder: 'artworks', file: 'index.html'}
+  #- {name: 'Exhibitions', folder: 'exhibitions', file: 'index.html'}
+  # tricky! just keep on main page man
+  #- {name: 'Updates', folder: 'updates', file: 'index.html'}
+  # - {name: 'Contact', folder: 'contact', file: 'index.html'}
+
+en:
+  - {name: 'Artists', folder: 'artists', file: 'index.html'}
+  - {name: 'Artworks', folder: 'artworks', file: 'index.html'}
+  - {name: 'Exhibitions', folder: 'exhibitions', file: 'index.html'}
+  - {name: 'Contact', folder: 'contact', file: 'index.html'}
+    # - {name: 'Interviews', folder: 'exhibitions', file: 'index.html'}
+hk:
+  - {name: '藝術家', folder: '藝術家', file: 'index.html'}
+  - {name: '藝術品', folder: '藝術品', file: 'index.html'}
+  - {name: '展覽', folder: '展覽', file: 'index.html'}
+  - {name: '聯繫我們', folder: '聯繫我們', file: 'index.html'}
+    #- {name: '訪問', folder: 'exhibitions', file: 'index.html'}

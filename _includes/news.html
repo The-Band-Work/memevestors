@@ -1,0 +1,16 @@
+{% assign posts = site.posts | where:"lang", page.lang %}
+
+{% for post in posts %}
+
+<article class="{{ post.lang }}">
+  <a href="{{ site.base-url }}{{ post.url }}">
+    <div class="featured-posts"  {% if post.image %}style="background-image:url({{ site.github.url }}/assets/img/{{ post.image }})"{% endif %}
+		{% if post.img %}style="background-image:url({{ post.img }})"{% endif %}
+		{% if post.art %}{% include art-banner.html name=post.art %}{% endif %} >
+
+      <h2><span>{{ post.title }}</span></h2>
+    </div>
+  </a>
+</article>
+
+{% endfor %}

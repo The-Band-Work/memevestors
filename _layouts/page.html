@@ -1,0 +1,15 @@
+---
+layout: default
+---
+
+{% assign lang = site.data.lang[page.lang] %}
+
+<div class="page-title">
+  <h1>
+    {{ page.title }}
+  </h1>
+</div>
+
+<article class="page" itemscope itemtype="http://schema.org/BlogPosting">
+  {{ content }}
+</article>

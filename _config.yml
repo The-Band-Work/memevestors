@@ -1,0 +1,135 @@
+# Dependencies
+highlighter:      rouge
+
+# Permalinks
+permalink:        pretty
+
+# Setup
+title:            Gateway Crypto 
+
+
+# Customise atom feed settings (this is where Jekyll-Feed gets configuration information)
+# title:
+#   en: "Gateway Crypto"
+#   es: "El Crypto"
+#
+# description:
+#   en: > # this means to ignore newlines until "author:"
+#     Some desc 
+#   es: > # this means to ignore newlines until "author:"
+#     Some el descripto
+
+
+paginate:         5
+paginate_path:    /posts/page:num/
+
+version:          1.0
+
+# Social Media
+email: info@gatewaycrypto.org
+donate: https://commerce.coinbase.com/checkout/a00f9155-4547-4a8e-883e-15546b48f04b
+chat: http://chat.fabricatorz.org/#/room/#gatewaycrypto:fabricatorz.org
+
+sass:
+  sass_dir: assets/css
+  style: :nested
+
+
+# Setup
+description: >- # this means to ignore newlines until "baseurl:"
+  Fintech Education Community Based in St. Louis
+
+baseurl: "" # the subpath of your site, e.g. /blog
+# url: "" # the base hostname & protocol for your site, e.g. http://example.com
+url: "https://gatewaycrypto.org"
+
+# Build settings
+markdown: kramdown
+# no theme!
+# theme: minima
+banner: Fintech Education Community Based in St. Louis
+message:
+
+call_to_action:
+
+question:
+
+# meta_redirect: https://somethingelse.com
+# meta_redirect_timeout: 30
+
+# favicon: /favicon.ico
+favicon: /favicon.ico
+logo: /assets/img/logo.jpg
+
+
+
+version: 20200623
+
+# DOES NOT WORK UNTIL JEKYLL > 3.7
+collections_dir: collections
+
+# https://jekyllrb.com/docs/collections/
+# collections:
+#   artwork:
+#     output: true
+#     permalink: /artwork/:path/
+#   artist:
+#     output: true
+#     permalink: /artist/:path/
+#   exhibition:
+#     output: true
+#     permalink: /exhibition/:path/
+
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+  - scope:
+      path: ""
+    values:
+      layout: "default"
+
+# RSS 2.0 can be used instead of Atom by uncommenting following two lines
+#feed:
+#  path: rss-feed.xml
+
+index:
+  en: index.html
+  es: index-es.html
+#feed:
+#  en: /feed.xml
+#  es: /feed-es.xml
+
+
+jekyll_admin:
+  hidden_links:
+    #- posts
+    #- pages
+    #- staticfiles
+    #- datafiles
+    #- configuration
+
+
+
+# Exclude from processing.
+# The following items will not be processed, by default. Create a custom list
+# to override the default setting.
+# exclude:
+#   - Gemfile
+#   - Gemfile.lock
+#   - node_modules
+#   - vendor/bundle/
+#   - vendor/cache/
+#   - vendor/gems/
+#   - vendor/ruby/
+
+
+
+
+exclude:
+  - bin
+  - app
+  - assets/pdf
+  - assets/templates

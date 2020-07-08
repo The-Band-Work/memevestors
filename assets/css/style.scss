@@ -1,0 +1,209 @@
+---
+---
+
+/** @import "{{ site.theme }}"; */
+
+
+#exp { color: red; }
+
+/* .cn { font-family: Arial,Helvetica,'Heiti SC','Microsoft Yahei',simsun,sans-serif;} */
+.cn { font-family: 'Noto Sans SC',sans-serif; font-weight: normal; font-style: normal; }
+
+.center { text-align: center; }
+
+.big { font-size: 400%; }
+
+.under { text-decoration: underline; }
+
+.upper { text-transform: uppercase; }
+
+.spacer { margin-bottom: 1em; }
+
+.spacer-top { margin-top: 1em; }
+
+.super {   vertical-align: super; font-size: 60%; }
+
+/* recommendation how to remove page breaks */
+p,  table, img, blockquote {page-break-inside: avoid; }
+html, body { overflow-x: visible; }
+
+
+/** NEW from login.np.org */
+
+body {
+  font-family: Helvetica, arial, sans-serif;
+  font-size: 12pt;
+  line-height: 2em;
+}
+
+a {
+  color: #1e73be;
+  text-decoration: underline;
+}
+
+a:hover {
+  text-decoration: underline;
+  background-color: #1e73be;
+  color: white;
+}
+
+.wrapper {
+
+  margin: 5% auto;
+	width: 80%;
+}
+
+#steps {
+  text-align: center;
+  width: 40%;
+  margin: 2em auto;
+}
+
+#steps h3 {
+  clear: both;
+  padding-top: 2em;
+}
+
+#steps h3:first-child {
+  padding-top: 0;
+}
+
+#pay {
+  width: 100%;
+  margin: 2em auto;
+  clear: both;
+  padding-bottom: 2em;
+}
+
+
+#pay .address {
+  font-size: 4pt;
+}
+#pay div {
+  float: left;
+  width: 33%;
+}
+
+#pay div img {
+  width: 60%;
+  clear: both;
+  display: block;
+}
+
+#contact {
+  display: block;
+  clear: both;
+  text-align: center;
+
+}
+
+
+#footer {
+  display: block;
+  clear: both;
+  /*
+  position: absolute;
+  bottom: 0;
+  */
+  margin: 4em auto;
+  padding: 20px;
+  width: 100%;
+  text-align: center;
+
+}
+
+
+/* Custom color */
+.button-blue {
+  background-color: #1e73be;
+  border-color: #1e73be;
+	color: white;
+
+	&:hover { 
+		text-decoration: none;
+	}
+}
+.button-black.button-clear,
+.button-black.button-outline {
+  background-color: transparent;
+  color: #1e73be;
+}
+.button-black.button-clear {
+  border-color: transparent;
+}
+
+.button-outline.button-blue {
+  color: #1e73be;
+}
+
+
+
+.logo { text-align: center }
+.logo img { width: 60%; }
+.logotext { font-size: 3em; text-align: center; }
+
+.stinger .logo img { width: 15%; }
+
+.stinger h5 { }
+
+
+.text-right { text-align: right; }
+.text-center { text-align: center; }
+
+.full-width { width: 100%; }
+
+.actions { text-align: center; margin-top: 3em; }
+.column-title { margin: auto }
+
+.under { text-decoration: underline; }
+
+ul {
+  margin: 0;
+}
+ul.dashed {
+  list-style-type: none;
+}
+ul.dashed > li {
+  text-indent: -5px;
+}
+ul.dashed > li:before {
+  content: "– ";
+  text-indent: -5px;
+}
+
+	.row.products .column,
+	.row.credentials .column { width: 300px; }
+
+/** END needs for _layouts/banner.html */
+
+/** print sheet */
+@media print {
+
+	.row.products .column { width: 250px; }
+	.row.credentials .column { width: 100% }
+
+	.row.credentials { padding-bottom: 4em; }
+
+
+  .page-new { padding-top: 3em; }
+
+  .pagebreak { page-break-before: always; }
+
+
+  body { line-height: 14pt; font-size: 10pt; margin: 0; padding: 0; }
+
+  a { text-decoration: none; }
+
+  hr { display: none; }
+
+  .box {
+    display: none;
+  }
+
+  /*
+  .wrapper::after {
+    content: "Please see www.archbridge.us for the latest version of this information.";
+  }
+  */
+
+}

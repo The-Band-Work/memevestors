@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="{{ site.lang | default: "en-US" }}">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="{{ site.description }} ">
+    <meta name="author" content="{{ site.author }}">
+
+    <title>{{ site.title }}</title>
+    <link rel="shortcut icon" href="/favicon.ico" type="image/vnd.microsoft.icon" />
+
+    {% seo %}
+
+    {% if site.meta_redirect %}
+    <meta http-equiv="refresh" content="{{ site.meta_redirect_timeout }}; url={{ site.meta_redirect }}">
+    {% endif %}
+    <link rel="stylesheet" href="{{ '/assets/css/style.css?v=' | append: site.version | relative_url }}">
+    <meta name="viewport" content="width=device-width">
+    <!--[if lt IE 9]>
+    <!-- no -->
+    <![endif]-->
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="logo"><img src="{{site.logo}}" /></div>
+
+      <div id="steps">
+        <h3>{{ site.banner }}</h3>
+        <p>{{ site.message }}</p>
+
+
+      <p>{{ site.call_to_action }} <a href="mailto:{{ site.email }}?subject={{site.question}}">{{site.email}}</p>
+      </div>
+
+      {{ content }}
+    </div>
+  </body>
+</html>

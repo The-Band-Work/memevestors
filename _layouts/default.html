@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="{{ page.lang | default: "en-US" }}">
+  <head>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-169426889-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'UA-170478870-1');
+    </script>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="{{ site.description }} ">
+    <meta name="author" content="{{ site.author }}">
+
+    <title>{{ site.title }}</title>
+    <link rel="shortcut icon" href="/favicon.ico" type="image/vnd.microsoft.icon" />
+		<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Roboto:300,300italic,700,700italic">
+		<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.css">
+		<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/milligram/1.3.0/milligram.css">
+
+    {% if site.meta_redirect %}
+    <meta http-equiv="refresh" content="{{ site.meta_redirect_timeout }}; url={{ site.meta_redirect }}">
+    {% endif %}
+    <link rel="stylesheet" href="{{ '/assets/css/style.css?v=' | append: site.version | relative_url }}">
+    <meta name="viewport" content="width=device-width">
+    <!--[if lt IE 9]>
+    <!-- no -->
+    <![endif]-->
+  </head>
+  <body>
+    <div class="wrapper">
+      {{ content }}
+    </div>
+  </body>
+</html>

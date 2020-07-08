@@ -1,0 +1,88 @@
+---
+layout: default
+---
+
+{% assign lang = site.data.lang[page.lang] %}
+
+<div class="page-content">
+  <h1>
+    {{ page.title }}
+  </h1>
+
+  <span class="post-date">
+    {{ lang.post_date_prefix }}
+    {% assign d = page.date | date: "%-d"  %}
+    {{ page.date | date: "%B" }}
+    {% case d %}
+      {% when '1' or '21' or '31' %}{{ d }}st
+      {% when '2' or '22' %}{{ d }}nd
+      {% when '3' or '23' %}{{ d }}rd
+      {% else %}{{ d }}th{% endcase %},
+    {{ page.date | date: "%Y" }}
+    by
+    {% if page.author %}
+      {{ page.author }}
+    {% else %}
+      {{ site.author }}
+    {% endif %}
+  </span>
+
+  {% if page.image %}
+    <div class="featured-image image">
+      <img src="{{ baseurl }}/assets/img/{{ page.image }}">
+    </div>
+  {% endif %}
+  {% if page.img %}
+    <div class="featured-image img">
+      <img src="{{ baseurl }}{{ page.img }}">
+    </div>
+  {% endif %}
+  {% if page.art %}
+    <div class="featured-image art">
+			{% include art-thumb.html name=page.art %}
+    </div>
+  {% endif %}
+
+  <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+    {{ content }}
+  </article>
+
+  <div class="related">
+    <h2>{{ lang.related_posts }}</h2>
+    {% assign listed_posts_urls = page.url | split: ' ' %}
+    <ul class="related-posts">
+      {% for tag in page.tags %}
+        {% assign myposts = site.tags[tag] | where:"lang", page.lang   %}
+        {% for ourpost in myposts limit:2 %}
+          {% if listed_posts_urls contains ourpost.url %}
+          {% else %}
+            <li>
+              <h3>
+                <a href="{{ baseurl }}{{ ourpost.url }}">
+                  <div class="related-thumbnail">
+                    {% if ourpost.image %}
+                      <img src="/assets/img/{{ ourpost.image }}">
+                    {% endif %}
+                    {% if ourpost.img %}
+                      <img src="{{ ourpost.img }}">
+                    {% endif %}
+ 									  {% if ourpost.art %}
+ 									  		{% include art-thumb.html name=ourpost.art url=ourpost.url %}
+ 									  {% endif %}
+                  </div>
+                  <div class="related-title">
+                    {{ ourpost.title }}
+                  </div>
+                  <!--<small>{{ ourpost.date | date: "%B %-d, %Y" }}</small>-->
+                </a>
+              </h3>
+            </li>
+            {% assign listed_posts_urls = listed_posts_urls | push: ourpost.url %}
+          {% endif %}
+        {% endfor %}
+      {% endfor %}
+    </ul>
+  </div>
+
+
+</div>

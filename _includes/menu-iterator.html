@@ -1,0 +1,14 @@
+
+		{% assign dtypes = "posts, pages, artwork, artist, exhibition" | split: ", " %}
+
+		{% for dtype in dtypes %}
+	    {% assign ctypes=site.[dtype] | where:"ref", page.ref | sort: 'lang' %}
+	    {% for c in ctypes %}
+	    {% if c.lang == page.lang %}
+	      {% assign lang_class = 'current' %}
+	    {% endif %}
+	    {% assign this_item = site.data.lang[c.lang].label %}
+	    <a href="{{ c.url }}" class="{{ c.lang }} {{lang_class}} menu-link">{{ this_item }}</a>
+	    {% assign lang_class =  '' %}
+	    {% endfor %}
+    {% endfor %}

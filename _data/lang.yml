@@ -1,0 +1,17 @@
+# site language goes here
+
+en:
+  label: en
+  flag: 🇺🇸
+  related_posts: 'You may also enjoy...'
+  post_date_prefix: 'Written on'
+  next_page: 'Newer'
+  previous_page: 'Older'
+
+hk:
+  label: 中文
+  flag: 🇭🇰
+  related_posts: '你或許還想了解...'
+  post_date_prefix: '寫在上面'
+  next_page: '下一個'
+  previous_page: '上一頁'
