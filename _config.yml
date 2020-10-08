@@ -26,9 +26,9 @@ paginate_path:    /posts/page:num/
 version:          1.0
 
 # Social Media
-email: info@gatewaycrypto.org
+email: gatewaycryptostl@gmail.com
 donate: https://commerce.coinbase.com/checkout/a00f9155-4547-4a8e-883e-15546b48f04b
-chat: http://chat.fabricatorz.org/&num;/room/&num;gatewaycrypto:fabricatorz.org
+group: https://www.facebook.com/groups/gatewaycrypto/
 
 sass:
   sass_dir: assets/css
@@ -60,6 +60,7 @@ question:
 # favicon: /favicon.ico
 favicon: /favicon.ico
 logo: /assets/img/logo.jpg
+gsu: /assets/img/gsu.gif 
 
 
 
