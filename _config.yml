@@ -5,7 +5,7 @@ highlighter:      rouge
 permalink:        pretty
 
 # Setup
-title:            Gateway Crypto 
+title:            Memevestors 
 
 
 # Customise atom feed settings (this is where Jekyll-Feed gets configuration information)
@@ -26,9 +26,9 @@ paginate_path:    /posts/page:num/
 version:          1.0
 
 # Social Media
-email: gatewaycryptostl@gmail.com
-donate: https://commerce.coinbase.com/checkout/a00f9155-4547-4a8e-883e-15546b48f04b
-group: https://www.facebook.com/groups/gatewaycrypto/
+email: #
+donate: #
+group: #
 
 sass:
   sass_dir: assets/css
@@ -37,17 +37,17 @@ sass:
 
 # Setup
 description: >- # this means to ignore newlines until "baseurl:"
-  Fintech Education Community Based in St. Louis
+  Memevestors
 
 baseurl: "" # the subpath of your site, e.g. /blog
 # url: "" # the base hostname & protocol for your site, e.g. http://example.com
-url: "https://gatewaycrypto.org"
+url: "https://memevestors.org"
 
 # Build settings
 markdown: kramdown
 # no theme!
 # theme: minima
-banner: Fintech Education Community Based in St. Louis
+banner: Memevestors
 message:
 
 call_to_action:
